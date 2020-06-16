@@ -1,6 +1,6 @@
 require "pry"
-
-
+require 'json'
+require 'rest-client'
 
 
 
