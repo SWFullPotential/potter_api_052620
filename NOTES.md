@@ -32,3 +32,52 @@ Will need to create classes for
 -CLI
 -API
 -Spells. 
+
+Helpful links :
+https://dev.to/peritract/harry-potter-and-the-accessing-of-apis-1i0i 
+https://www.potterapi.com/#authentication
+https://www.potterapi.com/login/
+https://gatsby-potterapi.netlify.app/
+https://www.potterapi.com/v1/spells?key=$2a$10$elFC6IIr0vVnAN4eCnBsPOnJNhvmtg6m6nnu.9vQa9RKaXi0wG6rW&bloodStatus=pure-blood&ministryOfMagic=True?
+
+
+
+Things used to organize thoughts and things i've tried: 
+
+
+
+# "    POTTER_ACCESS_KEY = "$2a$10$elFC6IIr0vVnAN4eCnBsPOnJNhvmtg6m6nnu.9vQa9RKaXi0wG6rW"
+# "    
+# "    BASE_URL = "https://www.potterapi.com/v1/"
+# "    ENDPOINT_URL = "spells""
+# "    url = BASE_URL + ENDPOINT_URL
+#     url = url + "?=key" + POTTER_ACCESS_KEY" 
+
+
+# spells = API.new.get_spells
+# puts spells
+
+
+
+# require 'net/http'
+# require 'open-uri'
+# require 'json'
+
+# class GetRequester
+#   attr_accessor :URL 
+  
+#   def initialize(url)
+#     @URL = URL
+#   end
+  
+#   def get_response_body
+#      uri = URI.parse(URL)
+#     response = Net::HTTP.get_response(uri)
+#     response.body
+#   end
+  
+#   def parse_json
+#     JSON.parse(get_response_body)
+#   end
+  
+# end
