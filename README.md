@@ -12,7 +12,7 @@ After downloading repository, run 'bin/potter-api'
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/<SWFullPotential/potter_api_052620_ft. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/SWFullPotential/potter_api_052620_ft/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://https://github.com/SWFullPotential/potter_api_052620. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/SWFullPotential/potter_api_052620_ft/blob/master/CODE_OF_CONDUCT.md).
 
 
 ## License
