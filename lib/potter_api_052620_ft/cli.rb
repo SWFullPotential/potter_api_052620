@@ -139,7 +139,6 @@ class Cli
                 print_main_menu
             elsif user_input == "Mischief Managed" 
                 exit_program
-                exit
             else
                 invalid_input
                 print_main_menu
@@ -168,6 +167,7 @@ class Cli
           #                                                  
            ##                                                
                        "
+            exit
         end
 
 

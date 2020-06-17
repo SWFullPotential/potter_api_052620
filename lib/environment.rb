@@ -1,9 +1,6 @@
 require "pry"
 require 'json'
 require 'rest-client'
-require 'open-uri'
-
-
 
 
 
