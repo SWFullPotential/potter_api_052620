@@ -12,8 +12,8 @@ class API
             effect = spell_info["effect"]
             Spells.new(spell: spell, type: type, effect: effect)
         end
-        # binding.pry
         
+        # binding.pry
         
     end
     #Something to this effect needs to work....need to be able to take the array that get_spells returns and create a new array based on spell TYPE.

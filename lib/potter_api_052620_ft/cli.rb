@@ -2,13 +2,23 @@ class Cli
     #service class because it's going to do something.
     
         def run
+            puts "
+            ▄  █ ████▄   ▄▀    ▄ ▄   ██   █▄▄▄▄    ▄▄▄▄▀ ▄▄▄▄▄   
+            █   █ █   █ ▄▀     █   █  █ █  █  ▄▀ ▀▀▀ █   █     ▀▄ 
+            ██▀▀█ █   █ █ ▀▄  █ ▄   █ █▄▄█ █▀▀▌      █ ▄  ▀▀▀▀▄   
+            █   █ ▀████ █   █ █  █  █ █  █ █  █     █   ▀▄▄▄▄▀    
+               █         ███   █ █ █     █   █     ▀              
+              ▀                 ▀ ▀     █   ▀                     
+                                       ▀                        "
             puts "Hello and welcome to Hogwarts' Library of Spells. Congratulations on being accepted to the greatest wizarding school in the world!"
     
             puts "Please hold while our house elves gather and categorize the spells you'll be learning during your time here..."
+            sleep(2)
             puts "..."
+            sleep(2)
             puts "..."
             API.get_spells
-
+            sleep(2)
             
             #loads data
             puts "Your patience is appreciated, and the spells have been assembled for your browsing pleasure."
@@ -36,15 +46,98 @@ class Cli
             user_input = gets.strip
             
             if user_input == "1"
-                puts " "
-                puts "*--*--*--*--*--*"
-                Spells.all.each.select do |spells|
-                    puts "##{spells.type}"
+                puts "
+        ▄█▄     ▄  █ ██   █▄▄▄▄ █▀▄▀█    ▄▄▄▄▄   
+        █▀ ▀▄  █   █ █ █  █  ▄▀ █ █ █   █     ▀▄ 
+        █   ▀  ██▀▀█ █▄▄█ █▀▀▌  █ ▄ █ ▄  ▀▀▀▀▄   
+        █▄  ▄▀ █   █ █  █ █  █  █   █  ▀▄▄▄▄▀    
+        ▀███▀     █     █   █      █             
+                    ▀     █   ▀      ▀              
+                        ▀                         "
+                Spells.charms.each do |charm|
+                    puts "#{charm.spell} - #{charm.effect}."
                 end
-                puts "*--*--*--*--*--*"
                 print_main_menu
-                binding.pry
-                elsif user_input == "Mischief Managed" 
+            elsif user_input == "2"
+                puts " 
+        ▄█▄      ▄   █▄▄▄▄   ▄▄▄▄▄   ▄███▄     ▄▄▄▄▄   
+        █▀ ▀▄     █  █  ▄▀  █     ▀▄ █▀   ▀   █     ▀▄ 
+        █   ▀  █   █ █▀▀▌ ▄  ▀▀▀▀▄   ██▄▄   ▄  ▀▀▀▀▄   
+        █▄  ▄▀ █   █ █  █  ▀▄▄▄▄▀    █▄   ▄▀ ▀▄▄▄▄▀    
+        ▀███▀  █▄ ▄█   █             ▀███▀             
+                ▀▀▀   ▀                                
+                                                        "
+                Spells.curses.each do |curse|
+                    puts "#{curse.spell} - #{curse.effect}."
+                end
+                print_main_menu
+            elsif user_input == "3"
+                puts "
+▄███▄      ▄   ▄█▄     ▄  █ ██      ▄     ▄▄▄▄▀ █▀▄▀█ ▄███▄      ▄     ▄▄▄▄▀ ▄▄▄▄▄   
+█▀   ▀      █  █▀ ▀▄  █   █ █ █      █ ▀▀▀ █    █ █ █ █▀   ▀      █ ▀▀▀ █   █     ▀▄ 
+██▄▄    ██   █ █   ▀  ██▀▀█ █▄▄█ ██   █    █    █ ▄ █ ██▄▄    ██   █    █ ▄  ▀▀▀▀▄   
+█▄   ▄▀ █ █  █ █▄  ▄▀ █   █ █  █ █ █  █   █     █   █ █▄   ▄▀ █ █  █   █   ▀▄▄▄▄▀    
+▀███▀   █  █ █ ▀███▀     █     █ █  █ █  ▀         █  ▀███▀   █  █ █  ▀              
+        █   ██          ▀     █  █   ██           ▀           █   ██                 
+                                ▀                                                      "
+                Spells.enchantments.each do |enchantment|
+                    puts "#{enchantment.spell} - #{enchantment.effect}."
+                end
+                print_main_menu
+            elsif user_input == "4"
+                puts " 
+    ▄  █ ▄███▄      ▄  ▄███▄     ▄▄▄▄▄   
+    █   █ █▀   ▀ ▀▄   █ █▀   ▀   █     ▀▄ 
+    ██▀▀█ ██▄▄     █ ▀  ██▄▄   ▄  ▀▀▀▀▄   
+    █   █ █▄   ▄▀ ▄ █   █▄   ▄▀ ▀▄▄▄▄▀    
+        █  ▀███▀  █   ▀▄ ▀███▀             
+        ▀           ▀                       
+                                            "
+                Spells.hexes.each do |hex|
+                    puts "#{hex.spell} - #{hex.effect}."
+                end
+                print_main_menu
+            elsif user_input == "5"
+                puts " 
+                ▄▄▄▄▄ ▄█    ▄       ▄  ▄███▄     ▄▄▄▄▄   
+                ▄▀  █   ██     █  ▀▄   █ █▀   ▀   █     ▀▄ 
+                    █   ██ ██   █   █ ▀  ██▄▄   ▄  ▀▀▀▀▄   
+                 ▄ █    ▐█ █ █  █  ▄ █   █▄   ▄▀ ▀▄▄▄▄▀    
+                  ▀      ▐ █  █ █ █   ▀▄ ▀███▀             
+                           █   ██  ▀                       
+                                                                                                    "
+                Spells.jinxes.each do |jinx|
+                    puts "#{jinx.spell} - #{jinx.effect}."
+                end
+                print_main_menu
+            elsif user_input == "6"
+                puts " 
+   ▄▄▄▄▄   █ ▄▄  ▄███▄   █    █      ▄▄▄▄▄   
+  █     ▀▄ █   █ █▀   ▀  █    █     █     ▀▄ 
+▄  ▀▀▀▀▄   █▀▀▀  ██▄▄    █    █   ▄  ▀▀▀▀▄   
+ ▀▄▄▄▄▀    █     █▄   ▄▀ ███▄ ███▄ ▀▄▄▄▄▀    
+            █    ▀███▀       ▀    ▀          
+             ▀                               
+                                            "
+            
+                Spells.spellType.each do |spellType|
+                    puts "#{spellType.spell} - #{spellType.effect}."
+                end
+                print_main_menu
+            elsif user_input == "7"
+                puts "
+                ██   █    █     
+                █ █  █    █     
+                █▄▄█ █    █     
+                █  █ ███▄ ███▄  
+                   █     ▀    ▀ 
+                  █             
+                 ▀              "
+                Spells.all.each do |all_spells|
+                    puts "#{all_spells.type}: #{all_spells.spell} - #{all_spells.effect}."
+                end
+                print_main_menu
+            elsif user_input == "Mischief Managed" 
                 exit_program
                 exit
             else
@@ -54,19 +147,27 @@ class Cli
 
         end
 
-        # def print_spell_categories
-        #     puts " "
-        #     puts "*--*--*--*--*--*"
-        #     Spells.all.each.with_index(1) do |spells, index|
-        #         puts "" #for a space between
-        #         puts "#{index}. #{spells.type}"
-        #         # binding.pry
-        #     end
-        # end
-
-        
         def exit_program
-            puts "*---*---*   Nox   *---*---*"
+            puts "
+                                                                        
+            ##### #     ##                                
+            ######  /#    #### /                             
+           /#   /  / ##    ###/                              
+          /    /  /  ##    # #                               
+              /  /    ##   #                                 
+             ## ##    ##   #    /###     /##    ###          
+             ## ##     ##  #   / ###  / / ###  #### /        
+             ## ##     ##  #  /   ###/     ### /###/         
+             ## ##      ## # ##    ##       ##/  ##          
+             ## ##      ## # ##    ##        /##             
+             #  ##       ### ##    ##       / ###            
+                /        ### ##    ##      /   ###           
+            /##/          ## ##    ##     /     ###          
+           /  #####           ######     /       ### /       
+          /     ##             ####     /         ##/        
+          #                                                  
+           ##                                                
+                       "
         end
 
 
@@ -75,12 +176,3 @@ class Cli
         end
 
  end
-    
-            # puts "Choose a category of spell to browse, or list all. 
-            #     1. Charm 
-            #     2. Curse   
-            #     3. Enchantment
-            #     4. Hex 
-            #     5. Jinx
-            #     6. Spell
-            #     7. List all. "

@@ -5,4 +5,5 @@ require_relative "../lib/environment"
 
 cli = Cli.new #creates the CLI instance
 cli.run #uses the instance to run the service method
+
 # API.get_spells
