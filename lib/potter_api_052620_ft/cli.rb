@@ -29,7 +29,7 @@ class Cli
     
         def print_main_menu
             puts "*--*--*--*--*--*"
-            puts "Please choose a category."
+            puts "Please choose a category(number)."
             puts "1. Charm"
             puts "2. Curse"
             puts "3. Enchantment"
