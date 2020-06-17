@@ -4,7 +4,7 @@ Hello and congratulations on being accepted to Hogwarts! We are so excited to ha
 
 ## Installation
 
-Please clone or download repository before running program by clicking the green button in the upper right corner. 
+Fork and clone repository for use. 
 
 ## Usage
 
