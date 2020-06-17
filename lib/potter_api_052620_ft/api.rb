@@ -12,8 +12,20 @@ class API
             effect = spell_info["effect"]
             Spells.new(spell: spell, type: type, effect: effect)
         end
-        binding.pry
-
-
+        # binding.pry
+        
+        
     end
+    #Something to this effect needs to work....need to be able to take the array that get_spells returns and create a new array based on spell TYPE.
+    #each new array needs to be a different 'type' of spell that when called to return list of array we get  "#{index}. #{spell}: #{effect}." of only that type of spell.  
+    # def self.charms(get_spells)
+    #     self.get_spells
+    #     charms_array = []
+    #     if type == "Charm"
+    #         charms_array << self 
+    #         charms_array
+    #     end
+
+    # end
+
 end

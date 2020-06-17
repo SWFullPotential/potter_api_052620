@@ -8,6 +8,8 @@ ENDPOINT: spells
 
 access key will be needed to access spells. **Must build access key in so that any user can access. 
 
+
+
 Types of spells: 
     - charm
     - curse
@@ -39,6 +41,9 @@ https://www.potterapi.com/#authentication
 https://www.potterapi.com/login/
 https://gatsby-potterapi.netlify.app/
 https://www.potterapi.com/v1/spells?key=$2a$10$elFC6IIr0vVnAN4eCnBsPOnJNhvmtg6m6nnu.9vQa9RKaXi0wG6rW&bloodStatus=pure-blood&ministryOfMagic=True?
+https://github.com/rest-client/rest-client
+https://www.youtube.com/watch?v=EeE3guwSMOc&feature=youtu.be
+
 
 
 
