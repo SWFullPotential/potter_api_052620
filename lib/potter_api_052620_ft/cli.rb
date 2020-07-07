@@ -42,22 +42,28 @@ class Cli
             category
         end
         
+        def charms
+            puts "
+    ▄█▄     ▄  █ ██   █▄▄▄▄ █▀▄▀█    ▄▄▄▄▄   
+    █▀ ▀▄  █   █ █ █  █  ▄▀ █ █ █   █     ▀▄ 
+    █   ▀  ██▀▀█ █▄▄█ █▀▀▌  █ ▄ █ ▄  ▀▀▀▀▄   
+    █▄  ▄▀ █   █ █  █ █  █  █   █  ▀▄▄▄▄▀    
+    ▀███▀     █     █   █      █             
+                ▀     █   ▀      ▀              
+                    ▀                         "
+            Spells.charms.each do |charm|
+                puts "#{charm.spell} - #{charm.effect}."
+            end
+            print_main_menu
+
+        end
+
+
         def category
             user_input = gets.strip
             
             if user_input == "1"
-                puts "
-        ▄█▄     ▄  █ ██   █▄▄▄▄ █▀▄▀█    ▄▄▄▄▄   
-        █▀ ▀▄  █   █ █ █  █  ▄▀ █ █ █   █     ▀▄ 
-        █   ▀  ██▀▀█ █▄▄█ █▀▀▌  █ ▄ █ ▄  ▀▀▀▀▄   
-        █▄  ▄▀ █   █ █  █ █  █  █   █  ▀▄▄▄▄▀    
-        ▀███▀     █     █   █      █             
-                    ▀     █   ▀      ▀              
-                        ▀                         "
-                Spells.charms.each do |charm|
-                    puts "#{charm.spell} - #{charm.effect}."
-                end
-                print_main_menu
+                charms
             elsif user_input == "2"
                 puts " 
         ▄█▄      ▄   █▄▄▄▄   ▄▄▄▄▄   ▄███▄     ▄▄▄▄▄   
